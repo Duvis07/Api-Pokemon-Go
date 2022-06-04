@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <span class="navbar-brand mb-0 h1">API-POKEMON-GO</span>
+</nav>
+<br />
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button (click)="search()" class="btn btn-primary" type="button">
+      Buscar
+    </button>
+  </div>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Ingrese el pokemon"
+    [(ngModel)]="name"
+  />
+</div>
