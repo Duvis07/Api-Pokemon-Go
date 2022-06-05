@@ -20,5 +20,26 @@
     [(ngModel)]="name"
   />
 </div>
+<br />
 
-<img id="image" src="{{ urlImage }}" style="height: 300px; width: 300px" />
+<div *ngIf="visibilidad"  class="container">
+  <div class="row">
+    <div class="col-4">
+      <h5 class="h5">Name</h5>
+       <h6>{{namePokemon}}</h6>
+    </div>
+
+    <div *ngIf="visibilidad"  class="col-4">
+      <h5>Image</h5>
+      <img id="image" src="{{ urlImage }}" />
+    </div>
+    <div *ngIf="visibilidad"  class="col-4">
+      <h5>Type</h5>
+      <ul class="list-group list-group-flush">
+        <li id="li" *ngFor="let tipo of types" class="list-group-item">
+          {{ tipo.type.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

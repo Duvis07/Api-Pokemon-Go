@@ -12,4 +12,8 @@ export class PokemonService {
   getPokemon(name: string) {
     return this.http.get(`${this.url}/${name}`);
   }
+
+  getType(url: string) {
+    return this.http.get(`${url}`);
+  }
 }
