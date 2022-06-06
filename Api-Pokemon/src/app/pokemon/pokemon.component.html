@@ -1,5 +1,5 @@
 <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark">
-  <span class="navbar-brand mb-0 h1">API-POKEMON-GO</span>
+  <span id="span" class="navbar-brand mb-0 h1">API-POKEMON-GO</span>
 </nav>
 <br />
 <div class="input-group mb-3">
@@ -22,18 +22,18 @@
 </div>
 <br />
 
-<div *ngIf="visibilidad"  class="container">
+<div *ngIf="visibilidad" class="container">
   <div class="row">
     <div class="col-4">
       <h5 class="h5">Name</h5>
-       <h6>{{namePokemon}}</h6>
+      <h6>{{ namePokemon }}</h6>
     </div>
 
-    <div *ngIf="visibilidad"  class="col-4">
+    <div *ngIf="visibilidad" class="col-4">
       <h5>Image</h5>
       <img id="image" src="{{ urlImage }}" />
     </div>
-    <div *ngIf="visibilidad"  class="col-4">
+    <div *ngIf="visibilidad" class="col-4">
       <h5>Type</h5>
       <ul class="list-group list-group-flush">
         <li id="li" *ngFor="let tipo of types" class="list-group-item">
